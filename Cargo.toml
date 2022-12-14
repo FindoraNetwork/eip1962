@@ -43,7 +43,7 @@ substrate-bn = { git = "https://github.com/paritytech/bn", default-features = fa
 rayon = "1.*"
 indicatif = {version = "*", features = ["with_rayon"]}
 parity-crypto = {version = "0.8.0", features = ["publickey"]}
-ethereum-types = "0.8"
+ethereum-types = "0.11.0"
 keccak-hash = "0.4"
 
 [features]

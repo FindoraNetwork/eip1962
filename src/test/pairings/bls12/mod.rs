@@ -284,7 +284,7 @@ fn dump_pairing_vectors() {
     for (curve, _) in curves.into_iter() {
         let mut input_data = vec![OPERATION_PAIRING];
         let calldata = assemble_single_curve_params(curve.clone(), 2, true).unwrap();
-        input_data.extend(calldata);
+        input_data.extend(&calldata[1..]);
         let expected_result = vec![1u8];
         writer.write_record(&[
             prepend_0x(&encode(&input_data[..])), 
